@@ -1,0 +1,9 @@
+<h3 mat-dialog-title i18n="@@confirmation-modal-title">{{title}}</h3>
+<div mat-dialog-content>
+    <p i18n="@@confirmation-modal-message">{{message}}</p>
+</div>
+
+<div mat-dialog-actions class="zone-btn">
+    <button mat-button (click)="close()" i18n="@@confirmation-modal-btn-cancel">ANNULER</button>
+    <button mat-button (click)="ok()" i18n="@@confirmation-modal-btn-ok">OK</button>
+</div>

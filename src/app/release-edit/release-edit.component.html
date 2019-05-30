@@ -1,0 +1,48 @@
+<mat-card class="example-container">
+    <mat-card-title *ngIf="!edit_mode">
+        New release
+    </mat-card-title>
+    <mat-card-title *ngIf="edit_mode">
+        Update release
+    </mat-card-title>
+
+    <mat-card-content>
+        <mat-form-field>
+            <input matInput
+                   placeholder="name of the release"
+                   [(ngModel)]="release.name">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Select a project</mat-label>
+            <mat-select [(ngModel)]="release.project">
+                <mat-option *ngFor="let project of projects" [value]="project">
+                    {{project.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-footer>
+        <mat-card-actions>
+            <button *ngIf="!edit_mode"
+                    mat-raised-button
+                    color="accent"
+                    i18n="@@tasks-edit-btn-create"
+                    (click)="save()">
+                Create
+            </button>
+            <button *ngIf="edit_mode"
+                    mat-raised-button
+                    color="accent"
+                    i18n="@@tasks-ecit-btn-update"
+                    (click)="save()">
+                Update
+            </button>
+            <button mat-raised-button
+                    color="accent"
+                    i18n="@@tasks-ecit-btn-cancel"
+                    (click)="dismiss($event)">
+                Cancel
+            </button>
+        </mat-card-actions>
+    </mat-card-footer>
+</mat-card>

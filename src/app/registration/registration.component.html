@@ -1,0 +1,72 @@
+<div id="Registercontainer">
+    <form id="registerForm" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-card>
+            <mat-card-header id="registerCardHeader">
+                <mat-card-title>
+                    <h2>Register</h2>
+                </mat-card-title>
+            </mat-card-header>
+            <a  href="login">Already registered? Please click here </a>
+            <mat-card-content id="registerCardContent">
+
+                <div id="username-form" class="form-group">
+                    <mat-form-field>
+                        <input matInput placeholder="username" formControlName="username" required>
+                        <mat-hint i18n="@@register-hint-password">Enter your username</mat-hint>
+                        <mat-error *ngIf="form.get('username').hasError('required')" i18n="@@register-error-password">
+                            Username is
+                            <strong>mandatory</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div id="email-form" class="form-group">
+                    <mat-form-field>
+                        <input matInput placeholder="email" formControlName="email" required>
+                        <mat-hint i18n="@@register-hint-password">Enter your remail</mat-hint>
+                        <mat-error *ngIf="form.get('username').hasError('required')" i18n="@@register-error-password">
+                            Email is
+                            <strong>mandatory</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <!-- Password -->
+                <div id="password-form" class="form-group">
+                    <mat-form-field>
+                        <input matInput placeholder="Mot de passe" formControlName="password1" type="password" required/>
+                        <mat-hint i18n="@@register-hint-password">Enter your password</mat-hint>
+                        <mat-error *ngIf="form.get('password1').hasError('required')" i18n="@@register-error-password">
+                            Password is
+                            <strong>mandatory</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+
+                <div id="password-verification-form" class="form-group">
+                    <mat-form-field>
+                        <input matInput placeholder="Retapez votre mot de passe" formControlName="password2" type="password" required/>
+                        <mat-hint i18n="@@register-hint-password">Retype your password</mat-hint>
+                        <mat-error *ngIf="form.get('password2').hasError('required')" i18n="@@register-error-password">
+                            Password is
+                            <strong>mandatory</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+                <small *ngIf="error" class="danger-color">{{error}}</small>
+            </mat-card-content>
+            <mat-card-footer>
+                <mat-card-actions id="RegisterCardAction">
+                    <div class="align-center margin-top-simple  margin-bottom-double">
+                        <button [disabled]="!form.valid" type="submit" mat-raised-button id="btn-connexion"
+                                i18n="@@register-btn-register">
+                            Register
+                        </button>
+                    </div>
+                </mat-card-actions>
+            </mat-card-footer>
+        </mat-card>
+    </form>
+</div>

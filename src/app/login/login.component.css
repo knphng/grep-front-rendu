@@ -1,0 +1,36 @@
+.mat-card{
+    padding:0 !important;
+}
+
+#Logincontainer{
+    width: 100%;
+    height:  50vh;
+}
+
+#loginForm{
+    max-width:  50%;
+    margin:auto;
+    margin-top: 5%;
+}
+
+#loginCardHeader{
+    background-color: #ffab00;
+    padding:5px !important;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+
+#loginCardContent{
+    margin-top:2%;
+    padding:10px;
+}
+
+#LoginCardAction{
+    margin-left:25px;
+    margin-bottom:15px;
+}
+
+.mat-form-field{
+    width: 100%;
+}
+

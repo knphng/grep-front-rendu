@@ -1,0 +1,19 @@
+<div id="releaseDetails"*ngIf="release | async as release">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Release: {{ release.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <p>Creator: {{ release.created_by }}</p>
+            <p>Last update: {{ release.updated_by }}</p>
+            <p>Project : {{ release.project.name }}</p>
+            <p>Tasks :</p>
+            <ul *ngFor="let task of tasks">
+                <li *ngIf="release.uuid == task.release">
+                    {{task.name}}
+                </li>
+            </ul>
+        </mat-card-content>
+    </mat-card>
+</div>

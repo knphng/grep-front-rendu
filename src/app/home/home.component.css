@@ -1,0 +1,87 @@
+.contentLayout{
+    height:100vh;
+    overflow: scroll;
+    background-color: white;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.header{
+    padding-top:50px;
+    background-color: #fff;
+    display:block;
+    width:100%;
+    height: 50vh;
+    text-align: center;
+}
+
+mat-card-content{
+    text-align:center;
+}
+
+.firstLayout{
+    width:100%;
+    margin-top:50vh;
+    background: #ffab00;
+    height: 60vh;
+}
+
+.secondLayout{
+    margin-top: 110vh;
+    background: white;
+    height:60vh;
+}
+
+.thirdLayout{
+    width:100%;
+    margin-top:170vh;
+    background: #ffab00;
+    height: 60vh;
+}
+
+.fourthLayout{
+    margin-top: 230vh;
+    background: white;
+    height:60vh;
+}
+
+.firstCard{
+    width:80%;
+    margin-left: 15%;
+    margin-top:5%;
+}
+.secondCard{
+    width:80%;
+    margin-right: 15%;
+    margin-top:5%;
+}
+
+.titreBadge{
+    height: 60px;
+    width: 60px;
+    background-color: #ffab00;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+p {
+    line-height: 2
+}
+
+.gridPrincipal {
+    position: absolute !important;
+    /*margin-top: -10% !important;*/
+}
+
+.material-icons {
+    font-size:60px;
+}

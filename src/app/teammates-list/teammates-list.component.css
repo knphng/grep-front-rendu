@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.mat-column-index {
+    width: 5%;
+}
+
+td.mat-column-editColumn, td.mat-column-deleteColumn {
+    width: 3%;
+}
+
+. mat-column-name{
+    margin-left: 3%;
+    text-align:left;
+}

@@ -1,0 +1,58 @@
+<div class="container" [class.mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary"><img style="width: 100%" style="height: 100%" src="../../assets/img/punchR.png">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <h1 class="example-app-name">Punch'R</h1>
+        <span class="example-fill-remaining-space"></span>
+        <span flex></span>
+        <div layout="row" layout-align="end center">
+            <a href="#" class="menuItem"><i _ngcontent-c3="" class="material-icons">dashboard</i></a>
+            <a href="#" class="menuItem"><i _ngcontent-c3="" class="material-icons">notifications</i></a>
+            <a href="login" class="menuItem"><i _ngcontent-c3="" class="material-icons">person</i></a>
+        </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="sidenav-container"
+                            [style.marginTop.px]="mobileQuery.matches ? 56 : 5">
+        <mat-sidenav #snav [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
+                 [mode]="mobileQuery.matches ? 'over' : 'side'">
+        <!-- [mode]="(isHandset$ | async) ? 'over' : 'side'"-->
+        <mat-nav-list>
+            <a mat-list-item href="workspaces">Workspace</a>
+            <a mat-list-item href="projects">Projects</a>
+            <a mat-list-item href="customers">Customers</a>
+            <!--<a mat-list-item href="#">Activities</a> -->
+            <a mat-list-item href="teammates">Teammates</a>
+            <a mat-list-item href="tasks">Tasks</a>
+            <a mat-list-item href="releases">Releases</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <!--<mat-toolbar color="secondary">
+            <button
+                type="button"
+                aria-label="Toggle Sidenav"
+                mat-icon-button
+                (click)="snav.toggle()">
+                <!--*ngIf="(isHandset | async)!.matches">->
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+            <app-menu style="width: 100%"></app-menu>
+
+
+        </mat-toolbar> -->
+        <!--<p *ngFor="let content of fillerContent">{{content}}</p>-->
+        <!--<ng-content></ng-content>-->
+        <!--<h1 class="title">
+            Bienvenu sur Punch'R
+        </h1>
+        <a class="btnIndex" href="#" pagescroll="" role="button">
+            <span class="btn-deep-orange">REGISTER</span>
+        </a>
+        <a class="btnIndex" href="#" pagescroll="" role="button">
+            <span class="btn-deep-orange">SIGN IN</span>
+        </a> -->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+</div>
+<!--<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>-->

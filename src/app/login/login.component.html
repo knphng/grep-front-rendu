@@ -1,0 +1,48 @@
+<div id="Logincontainer">
+    <form id="loginForm" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-card>
+            <mat-card-header id="loginCardHeader">
+                <mat-card-title>
+                    <h2>Login</h2>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content id="loginCardContent">
+                <!-- Username -->
+                <div id="username-form" class="form-group">
+                    <mat-form-field>
+                        <input matInput placeholder="username" formControlName="username" required>
+                        <mat-hint i18n="@@login-hint-password">Enter your username</mat-hint>
+                        <mat-error *ngIf="form.get('username').hasError('required')" i18n="@@login-error-password">
+                            Username is
+                            <strong>mandatory</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <!-- Password -->
+                <div id="password-form" class="form-group">
+                    <mat-form-field>
+                        <input matInput placeholder="Mot de passe" formControlName="password" type="password" required/>
+                        <mat-hint i18n="@@login-hint-password">Enter your password</mat-hint>
+                        <mat-error *ngIf="form.get('password').hasError('required')" i18n="@@login-error-password">
+                            Password is
+                            <strong>mandatory</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+                <small *ngIf="error" class="danger-color">{{error}}</small>
+            </mat-card-content>
+            <mat-card-footer>
+                <mat-card-actions id="LoginCardAction">
+                    <div class="align-center margin-top-simple  margin-bottom-double">
+                        <button [disabled]="!form.valid" type="submit" mat-raised-button id="btn-connexion"
+                                i18n="@@login-btn-login">
+                            Connect
+                        </button>
+                    </div>
+                </mat-card-actions>
+            </mat-card-footer>
+        </mat-card>
+    </form>
+</div>

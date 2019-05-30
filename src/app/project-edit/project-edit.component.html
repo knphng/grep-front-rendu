@@ -1,0 +1,46 @@
+
+
+<mat-card-title *ngIf="!edit_mode">
+    New project
+</mat-card-title>
+<mat-card-title *ngIf="edit_mode">
+    Update project
+</mat-card-title>
+<div mat-dialog-content>
+    <mat-card-content>
+        <mat-form-field>
+            <input matInput
+                   placeholder="name of the project"
+                   [(ngModel)]="project.name">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput
+                   placeholder="budget of the project"
+                   [(ngModel)]="project.budget">
+        </mat-form-field>
+    </mat-card-content>
+</div>
+<div mat-dialog-actions>
+    <button *ngIf="!edit_mode"
+            mat-raised-button
+            color="accent"
+            i18n="@@projects-edit-btn-create"
+            (click)="save()">
+        Create
+    </button>
+    <button *ngIf="edit_mode"
+            mat-raised-button
+            color="accent"
+            i18n="@@projects-ecit-btn-update"
+            (click)="save()">
+        Update
+    </button>
+    <button *ngIf="edit_mode"
+            mat-raised-button
+            color="accent"
+            i18n="@@projects-ecit-btn-cancel"
+            (click)="dismiss($event)">
+        Cancel
+    </button>
+</div>

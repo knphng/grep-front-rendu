@@ -1,0 +1,14 @@
+<mat-card-title>New Customer </mat-card-title>
+<div mat-dialog-content>
+    <mat-card-content>
+        <mat-form-field>
+            <input matInput
+                   placeholder="name of the customer"
+                   [(ngModel)]="customer.name">
+        </mat-form-field>
+    </mat-card-content>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button (click)="save()">Ok</button>
+</div>

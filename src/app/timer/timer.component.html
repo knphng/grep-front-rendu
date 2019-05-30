@@ -1,0 +1,51 @@
+<!-- load momentJS (required for angular-moment) -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+
+<!-- load angular-moment -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
+<p>
+    Start editing to see some magic happen :)
+</p>
+
+<button
+
+    mat-fab
+    color="accent"
+    (click)='startTimer()'>Start Timer</button>
+<button
+
+    mat-fab
+    color="#75e900"
+    (click)='stopTimer()'>Pause</button>
+
+<p>{{timePassed}} Seconds Passed....</p>
+<p>{{timeStart}} Time Start....</p>
+<p>{{timeStop}} Time Stop....</p>
+
+
+
+    <div class="jumbotron">
+        <h2>Display Time Relatively in Angular</h2>
+        <p>The time is {{ test }}</p>
+    </div>
+<!--
+    <div class="well">
+        <h2>Relative Time <small>(directive)</small></h2>
+        <time am-time-ago="main.time" title="{{ main.timeStart | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}"></time>
+    </div>
+
+    <div class="well">
+        <h2>Date Format <small>(filter)</small></h2>
+        <time title="{{ main.timeStart | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}">{{ main.timeStart | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}</time>
+    </div>
+
+    <div class="well">
+        <h2>Calendar Format <small>(filter)</small></h2>
+        <time title="{{ main.timeStart | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}">{{ main.timeStart | amCalendar }}</time>
+    </div>
+
+    <p class="text-center">
+        View the <a href="https://scotch.io/tutorials/display-time-relatively-in-angular">tutorial</a> on <a href="https://scotch.io">scotch.io</a>
+    </p>
+-->
+

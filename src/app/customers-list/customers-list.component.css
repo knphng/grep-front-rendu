@@ -1,0 +1,15 @@
+
+table {
+    width: 80%;
+
+}
+#customerList{
+
+    height: 600px;
+    overflow: auto;
+}
+
+
+table tr:hover{
+    background-color: lightgoldenrodyellow;
+}

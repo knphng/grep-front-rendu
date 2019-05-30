@@ -1,0 +1,18 @@
+<div id="projectDetails"*ngIf="project | async as project">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Project: {{ project.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <p>Budget: {{ project.budget }}</p>
+            <p>Customer: {{ project.budget }}</p>
+            <p>Estimated time : {{ project.budget }}</p>
+            <p>Executed time : {{ project.budget }}</p>
+            <p>Status : {{ project.budget }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+
+        </mat-card-actions>
+    </mat-card>
+</div>

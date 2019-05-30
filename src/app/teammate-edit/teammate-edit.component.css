@@ -1,0 +1,16 @@
+.teammateFormContainer {
+    font-size: 14px;
+    width: 90%;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+button{
+    border-color: #d50000;
+}
+
+.mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent{
+    border-color: #d50000;
+}
