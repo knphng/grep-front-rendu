@@ -37,8 +37,8 @@ export class WorkspaceDetailsComponent implements OnInit {
     /** activities according to workspace */
     activities: Activity[];
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+    @ViewChild(MatSort, { static: true }) sort: MatSort;
     @Input() project: Observable<Project>;
 
     constructor(

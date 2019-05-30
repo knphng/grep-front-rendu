@@ -26,8 +26,8 @@ export class ReleaseListComponent implements OnInit {
 
     releases: Release[];
 
-    @ViewChild(MatSort) sort: MatSort;
-    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort, { static: true }) sort: MatSort;
+    @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
     // @Input() project: Observable<Project>;
 
     constructor(

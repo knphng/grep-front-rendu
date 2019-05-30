@@ -18,8 +18,8 @@ export class TeammatesListComponent implements OnInit {
 
     teammates: Teammate[];
 
-    @ViewChild(MatSort) sort: MatSort;
-    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort, { static: true }) sort: MatSort;
+    @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
     constructor(
         private teammateService: TeammateService

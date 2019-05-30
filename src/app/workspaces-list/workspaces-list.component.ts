@@ -27,8 +27,8 @@ export class WorkspacesListComponent implements OnInit {
 
     workspaces: Workspace[];
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+    @ViewChild(MatSort, { static: true }) sort: MatSort;
     @Input() project: Observable<Project>;
 
     constructor(

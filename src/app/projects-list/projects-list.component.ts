@@ -30,8 +30,8 @@ export class ProjectsListComponent implements OnInit {
         {value: 'ghi-789', viewValue: 'Cust3'}
     ];
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+    @ViewChild(MatSort, { static: true }) sort: MatSort;
     @Input() project: Project;
 
     constructor(
