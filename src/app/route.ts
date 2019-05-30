@@ -1,5 +1,5 @@
 export class Route {
-    public static ROOT = '';
+    public static ROOT = 'ertzujhgfd';
 
     /**
      * LOGIN AND REGISTRATION RELATED ROUTE
