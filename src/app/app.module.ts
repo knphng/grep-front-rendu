@@ -44,6 +44,7 @@ import { ReleaseListComponent } from './release-list/release-list.component';
 import { ReleaseEditComponent } from './release-edit/release-edit.component';
 import { ReleaseDetailsComponent } from './release-details/release-details.component';
 import {APP_BASE_HREF} from '@angular/common';
+import {ConfirmationModalComponent} from './confirmation-modal/confirmation-modal.component';
 
 
 export function tokenGetter() {
@@ -53,32 +54,30 @@ export function tokenGetter() {
 @NgModule({
     declarations: [
         AppComponent,
-        MenuComponent,
-        ProjectsListComponent,
-        SidebarComponent,
-        TasksListComponent,
-        TeammatesListComponent,
-        CustomersListComponent,
-        MenuComponent,
-        ProjectsListComponent,
-        SidebarComponent,
+        ConfirmationModalComponent,
         CustomerDetailComponent,
         CustomerEditComponent,
-        ProjectEditComponent,
-        TaskEditComponent,
-        TeammateEditComponent,
+        CustomersListComponent,
         LoginComponent,
-        RegistrationComponent,
-        WorkspacesListComponent,
-        WorkspacesEditComponent,
-        TeammateDetailsComponent,
-        ProjectDetailsComponent,
         HomeComponent,
-        WorkspaceDetailsComponent,
-        TimerComponent,
-        ReleaseListComponent,
-        ReleaseEditComponent,
+        MenuComponent,
+        ProjectDetailsComponent,
+        ProjectEditComponent,
+        ProjectsListComponent,
+        RegistrationComponent,
         ReleaseDetailsComponent,
+        ReleaseEditComponent,
+        ReleaseListComponent,
+        SidebarComponent,
+        TaskEditComponent,
+        TasksListComponent,
+        TeammateDetailsComponent,
+        TeammateEditComponent,
+        TeammatesListComponent,
+        TimerComponent,
+        WorkspaceDetailsComponent,
+        WorkspacesEditComponent,
+        WorkspacesListComponent,
     ],
     imports: [
         AppRoutingModule,
@@ -88,10 +87,6 @@ export function tokenGetter() {
         HttpClientModule,
         LayoutModule,
         MaterialModule,
-        MatIconModule,
-        MatCardModule,
-        MatSnackBarModule,
-        MatDialogModule,
         NoopAnimationsModule,
         ReactiveFormsModule,
         JwtModule.forRoot({
