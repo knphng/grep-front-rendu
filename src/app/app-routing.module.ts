@@ -21,7 +21,7 @@ const routes: Routes = [
     /**
      * DEFAULT ROUTES
      */
-    {path: '', redirectTo: '/' + Route.ROOT, pathMatch: 'full', canActivate: [AuthGuard]},
+    {path: '', redirectTo: '/', pathMatch: 'full', canActivate: [AuthGuard]},
 
     /**
      * LOGIN/REGISTATION RELATED ROUTES
