@@ -45,6 +45,8 @@ import { ReleaseEditComponent } from './release-edit/release-edit.component';
 import { ReleaseDetailsComponent } from './release-details/release-details.component';
 import {APP_BASE_HREF} from '@angular/common';
 import {ConfirmationModalComponent} from './confirmation-modal/confirmation-modal.component';
+import {RouterModule, UrlSegment} from '@angular/router';
+import {TestComponentRenderer} from '@angular/core/testing';
 
 
 export function tokenGetter() {
@@ -95,7 +97,21 @@ export function tokenGetter() {
                 whitelistedDomains: ['example.com'],
                 blacklistedRoutes: ['example.com/examplebadroute/']
             }
-        })
+        }),
+        RouterModule.forRoot([
+            {
+                matcher(segments: UrlSegment[]) {
+                    if (segments.length) {
+                        return {
+                            consumed: [segments[0]],
+                        };
+                    } else {
+                        return undefined;
+                    }
+                },
+                component: AppComponent,
+            }
+        ])
     ],
     providers: [
         HttpClientModule,
