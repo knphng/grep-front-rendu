@@ -50,7 +50,7 @@ export class Route {
     /**
      * HOME RELATED ROUTE
      */
-    public static HOME = '';
+    public static HOME = '/';
 
 
 }
